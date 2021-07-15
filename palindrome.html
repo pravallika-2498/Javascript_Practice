@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Namastey Javascript!
+    </title>
+
+</head>
+
+<body>
+    <h2>Palindrome Program</h2>
+    <input id="txt1" type="text" value="" placeholder="Type here" />
+    <button id="btn" class="btn" onclick=myFunc()>Submit</button>
+    <p id="demo" class="sample"></p>
+
+    <script>
+        function myFunc() {
+            debugger
+            var result = 0;
+            var input = document.getElementById("txt1").value;
+            if (!isNaN(input)) {
+                while (Number(input) > 0) {
+                    var temp = Math.floor(input % 10);
+                    result = result * 10 + temp;
+                    input = parseInt(input / 10);
+                }
+                return alert(document.getElementById("txt1").value == result ? "Palindrome" : "Not Palindrome");
+            }
+            else{
+                if(input == input.split('').reverse().join(''))
+                    return alert("Palindrome")
+                else 
+                 return alert("Not palindrome");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
