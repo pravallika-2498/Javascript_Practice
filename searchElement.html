@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Array Search</h2>
+<label>Enter  elements </label>
+<input type = "text" id="value1" /><br/><br/>
+<label>Enter an element to search</label>
+<input type = "text" id="value2" />
+<button id="btn" class="btn" onclick=myFunction()>search</button>
+<p id="demo"></p>
+
+<script>
+function myFunction(){
+	var input=document.getElementById("value1").value.split(" ");
+	var searchElement = document.getElementById("value2").value;
+	var result = input.indexOf(searchElement);
+	if(result >= 0)
+		document.getElementById("demo").innerHTML = "Element found at position " + (result+1);
+	else 
+		document.getElementById("demo").innerHTML = "Element not found";
+} 
+</script>
+
+</body>
+</html>
