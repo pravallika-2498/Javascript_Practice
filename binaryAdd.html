@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+   <h2>Add Binary</h2>
+   <input type="text" id="txt1" placeholder="Enter binary number" />
+   <button onclick="myFunction()">Click me</button>
+
+
+   <p id="demo"></p>
+
+   <script>
+
+      function myFunction() {
+         var result = 0, isBinary;
+         var input = document.getElementById("txt1").value.split("");
+         input.map(ele => {
+            if ((parseInt(ele) === 0) || (parseInt(ele) === 1)) {
+               isBinary = true;
+            }
+            else
+               isBinary = false;
+         })
+         if (isBinary) {
+            input.map(ele => result = result + parseInt(ele));
+         }
+         else
+            return alert("input is not binary");
+         document.getElementById("demo").innerHTML = result;
+      }
+   </script>
+
+</body>
+
+</html>
