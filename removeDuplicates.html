@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Program to remove duplicates</h2>
+<button onclick="myFunction()">Click me</button>
+
+
+<p id="demo"></p>
+
+
+<script>
+
+  function myFunction(){
+var arr = ["apple", "bannana", "orange", "apple", "orange"];
+
+arr = arr.filter( function( item, index, inputArray ) {
+           return inputArray.indexOf(item) == index;
+    });
+
+    document.getElementById("demo").innerHTML = arr;
+  }
+</script>
+
+</body>
+</html>
